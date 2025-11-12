@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import ContactForm from '@/components/ContactForm'
+import ContactPreview from '@/components/ContactPreview'
 import Image from 'next/image'
 
 /**
@@ -73,7 +73,8 @@ export default function ContactFull() {
             <h2 className="heading-3 text-gray-900 mb-6">
               Send Us a Message
             </h2>
-            <ContactForm />
+            {/* Reuse the lightweight contact preview form for submissions */}
+            <ContactPreview />
 
             {/* Contact Details */}
             <div className="mt-8 space-y-6">
