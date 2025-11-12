@@ -1,16 +1,31 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { navLinks } from '@/lib/siteMeta'
+
+/**
+ * Navbar Component - Two-Route Aware Navigation
+ * Left: Logo (links to '/')
+ * Center/Right: Navigation links
+ * Sticky with backdrop blur and subtle shadow
+ * Mobile hamburger menu
+ */
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md" role="navigation" aria-label="Main navigation">
+    <nav 
+      className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-md shadow-md border-b border-[#d4b896]/30" 
+      role="navigation" 
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-20 md:h-24">
           
           {/* Logo */}
           <Link 
@@ -18,39 +33,46 @@ export default function Navbar() {
             className="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded"
             aria-label="Vihaara Business Bay Home"
           >
-            {/* TODO: Replace with actual logo from public/Logo/ */}
-            <div className="text-xl md:text-2xl font-bold text-primary-600">
-              <span className="text-primary-700">Vihaara</span>
-              <span className="text-accent-600"> Business Bay</span>
-            </div>
+            <Image
+              src="/Logo/Black_PNG.png"
+              alt="Vihaara Business Bay Logo"
+              width={280}
+              height={95}
+              className="h-16 md:h-20 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-primary-600 font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded px-2 py-1"
+                className="text-black hover:text-[#d4b896] font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#d4b896] rounded px-2 py-1"
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
-            
-            {/* CTA Button */}
+
+            {/* Download Brochure Button */}
             <a
-              href="tel:9769045555"
-              className="btn-primary text-sm md:text-base"
-              aria-label="Call to book a site visit"
+              href="/Vihaara Business Bay.pdf"
+              download
+              className="px-6 py-2.5 bg-[#d4b896] text-[#0a4d5c] font-semibold rounded-lg shadow-lg hover:bg-[#f5e6d3] hover:scale-105 transition-all duration-300 text-sm md:text-base flex items-center gap-2"
+              aria-label="Download Vihaara Business Bay brochure"
             >
-              Book a Site Visit
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Download Brochure
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-primary-500"
+            className="md:hidden p-2 rounded-lg text-black hover:bg-[#d4b896]/10 focus:outline-none focus:ring-2 focus:ring-[#d4b896]"
             aria-expanded={isMenuOpen}
             aria-label="Toggle navigation menu"
           >
@@ -75,25 +97,29 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-[#d4b896]/30">
             <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-primary-600 font-medium px-4 py-2 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                  className="text-black hover:text-[#d4b896] hover:bg-[#d4b896]/10 font-medium px-4 py-2 rounded-lg transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
-                </Link>
+                </a>
               ))}
               <a
-                href="tel:9769045555"
-                className="btn-primary mx-4 text-center"
+                href="/Vihaara Business Bay.pdf"
+                download
+                className="px-6 py-3 bg-[#d4b896] text-[#0a4d5c] font-semibold rounded-lg shadow-lg hover:bg-[#f5e6d3] transition-all duration-300 mx-4 text-center flex items-center justify-center gap-2"
                 onClick={() => setIsMenuOpen(false)}
-                aria-label="Call to book a site visit"
+                aria-label="Download Vihaara Business Bay brochure"
               >
-                Book a Site Visit
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Brochure
               </a>
             </div>
           </div>
@@ -102,3 +128,4 @@ export default function Navbar() {
     </nav>
   )
 }
+

@@ -1,119 +1,48 @@
 # Vihaara Business Bay
 
-**India's First Sparkle Tower in Dombivli**
+> India's First Sparkle Tower in Dombivli
 
-A premium commercial real estate project featuring modern office spaces and retail opportunities in the heart of Dombivli.
+![Vihaara Business Bay](./public/assets/hero/hero-build.png)
 
-## 🚀 Getting Started
+## About
 
-### Prerequisites
+A 6-storey commercial complex in Dombivli East featuring Dubai-inspired architecture and fully furnished offices.
 
-- Node.js 18.x or higher
-- npm or yarn
+**MahaRERA Registration:** P51700080851
 
-### Installation
+## Tech Stack
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS
+- Framer Motion
 
-2. **Add your assets:**
-   - Copy all images from Google Drive into the `public/assets/` folders:
-     - Hero images → `public/assets/hero/`
-     - Gallery images → `public/assets/gallery/`
-     - Floor plans → `public/assets/floorplans/`
-     - Logo → `public/Logo/`
-     - Any other assets → appropriate subfolders in `public/assets/`
+## Getting Started
 
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+`ash
+npm install
+npm run dev
+`
 
-4. **Open your browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000)
 
-## 📦 Build for Production
+## Contact
 
-```bash
-npm run build
-npm start
-```
+**Phone:** 9769045555  
+**Email:** vihaarabusinessbay@gmail.com
 
-## 🗂️ Project Structure
+**Sales Lounge:**  
+W69, Opp. Aurindam Hospital, Near DNS Bank, MIDC Phase II, Dombivli East, Thane, Maharashtra
 
-```
-/
-├─ app/                  # Next.js 14 App Router
-│  ├─ layout.js         # Root layout with Navbar & Footer
-│  ├─ page.js           # Home page
-│  ├─ about/            # About page
-│  ├─ amenities/        # Amenities page
-│  ├─ gallery/          # Gallery page
-│  └─ api/contact/      # Contact form API endpoint
-├─ components/          # Reusable React components
-├─ lib/                 # Utilities and metadata
-├─ public/assets/       # Static images and files
-└─ styles/              # Global CSS and Tailwind
-```
+**Corporate Office:**  
+304�305, Shiv Plaza, IBS Road, Ghatkopar West, Mumbai � 400086, Maharashtra
 
-## 🛠️ Tech Stack
+## Social Links
 
-- **Framework:** Next.js 14 (App Router)
-- **Styling:** Tailwind CSS
-- **Animations:** Framer Motion
-- **Icons/Animations:** Lottie React
-- **Forms:** Axios for API calls
-- **Image Optimization:** Next.js Image component
-
-## 📝 Customization
-
-### Update Site Metadata
-Edit `lib/siteMeta.js` to update site-wide information like title, description, contact details, and RERA information.
-
-### Add Content
-Replace placeholder comments in components with actual content from the Vihaara Business Bay brochure:
-- `components/Hero.jsx` - Update headlines and CTAs
-- `components/AmenitiesGrid.jsx` - Add real amenities
-- `app/about/page.js` - Add project description
-- `lib/siteMeta.js` - Update contact and RERA details
-
-### Upload Images
-Make sure to add high-quality images in WebP format for best performance:
-- Hero background images
-- Gallery photos
-- Floor plan diagrams
-- Logo files
-
-## 🔒 SEO & Accessibility
-
-- Semantic HTML throughout
-- Proper heading hierarchy
-- Alt text for all images
-- ARIA labels for interactive elements
-- JSON-LD structured data
-- Open Graph and Twitter Card meta tags
-- Prefers-reduced-motion support
-
-## 📱 Responsive Design
-
-The site is fully responsive and optimized for:
-- Mobile (320px+)
-- Tablet (768px+)
-- Desktop (1024px+)
-- Large screens (1920px+)
-
-## 📞 Contact
-
-**Vihaara Business Bay**
-- Phone: 9769045555
-- Location: Dombivli, Maharashtra
-
-## 📄 License
-
-Private project - All rights reserved.
+- [Facebook](https://www.facebook.com/profile.php?id=61581542836240)
+- [Instagram](https://www.instagram.com/vihaarabusinessbay/)
+- [Google Maps](https://maps.app.goo.gl/7qMr4LHq8t5NboS38)
 
 ---
 
-**Note:** This is a starter template. Replace all placeholder content with actual project information and upload real images from your Google Drive to the appropriate folders.
+ 2025 Vihaara Business Bay. All rights reserved.

@@ -1,0 +1,33 @@
+{
+  "name": "Vihaara Business Bay - Premium Commercial Spaces in Navi Mumbai",
+  "short_name": "Vihaara Business Bay",
+  "description": "Your Gateway to Premium Business & Retail Spaces at Ulwe, Navi Mumbai - Starting at ₹39.99 Lakhs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0a4d5c",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Logo/Black_PNG.png",
+      "sizes": "280x95",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo/Black_PNG.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/Logo/Black_PNG.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "real estate", "commercial"],
+  "lang": "en",
+  "dir": "ltr"
+}

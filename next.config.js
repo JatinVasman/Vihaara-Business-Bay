@@ -8,10 +8,6 @@ const nextConfig = {
     // Add external domains here if needed (e.g., CDN)
     // domains: ['yourdomain.com'],
   },
-  // Enable experimental features if needed
-  experimental: {
-    optimizeCss: true,
-  },
 }
 
 module.exports = nextConfig
