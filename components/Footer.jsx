@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { siteMeta, navLinks } from '@/lib/siteMeta'
 
 export default function Footer() {
@@ -142,20 +143,35 @@ export default function Footer() {
             
             {/* RERA Information */}
             <div className="mt-6 pt-4 border-t border-[#d4b896]">
-              <p className="text-xs text-gray-600 mb-2">
+              {/* RERA QR Code */}
+              <div className="mb-4">
+                <div className="relative w-32 h-32 bg-white p-2 rounded-lg shadow-md mx-auto">
+                  <Image
+                    src="/assets/rera-qr.png"
+                    alt="MahaRERA QR Code"
+                    fill
+                    className="object-contain"
+                    sizes="128px"
+                  />
+                </div>
+              </div>
+              
+              <p className="text-xs text-gray-600 mb-2 text-center">
                 <strong className="text-[#0a4d5c]">MahaRERA Registration:</strong>
               </p>
-              <p className="text-xs text-gray-600 mb-2">
+              <p className="text-xs text-gray-600 mb-2 text-center">
                 {siteMeta.rera.number}
               </p>
-              <a 
-                href={siteMeta.rera.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-[#d4b896] hover:text-[#0a4d5c] underline"
-              >
-                View on MahaRERA
-              </a>
+              <div className="text-center">
+                <a 
+                  href={siteMeta.rera.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-[#d4b896] hover:text-[#0a4d5c] underline"
+                >
+                  View on MahaRERA
+                </a>
+              </div>
             </div>
           </div>
         </div>

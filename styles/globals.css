@@ -57,6 +57,13 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Add padding to body on mobile for bottom bar */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 70px;
+  }
+}
+
 /* Improved focus-visible outlines for accessibility */
 a:focus-visible,
 button:focus-visible,

@@ -1,6 +1,8 @@
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ContactPopup from '@/components/ContactPopup'
+import MobileBottomBar from '@/components/MobileBottomBar'
 import '@/styles/globals.css'
 import { siteMeta, generateLocalBusinessSchema } from '@/lib/siteMeta'
 import Script from 'next/script'
@@ -108,6 +110,12 @@ export default function RootLayout({ children }) {
         </main>
         
         <Footer />
+        
+        {/* Mobile Bottom Bar - Only visible on mobile */}
+        <MobileBottomBar />
+        
+        {/* Contact Popup - Auto-shows on first visit */}
+        <ContactPopup />
       </body>
     </html>
   )

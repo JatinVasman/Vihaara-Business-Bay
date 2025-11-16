@@ -1,18 +1,18 @@
 'use client'
 
 import Hero from '@/components/Hero'
+import RegisterInterest from '@/components/sections/RegisterInterest'
 import WelcomeSection from '@/components/sections/WelcomeSection'
 import AboutSection from '@/components/sections/AboutSection'
-import AmenitiesSection from '@/components/sections/AmenitiesSection'
 import VisionSection from '@/components/sections/VisionSection'
-import InfrastructureSection from '@/components/sections/InfrastructureSection'
+import LocationSection from '@/components/sections/LocationSection'
 import FloorplansSection from '@/components/sections/FloorplansSection'
 import ContactPreview from '@/components/ContactPreview'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 
 /**
  * Home Page - Main Landing Single-Scroll Page
- * Sections in order: Hero, Welcome, About, Floorplans, Amenities, Vision, Infrastructure, Contact Preview
+ * Sections in order: Hero, Welcome, About, Floorplans, Location, Vision, Contact Preview
  * Each section has an id for anchor navigation
  */
 
@@ -25,6 +25,9 @@ export default function HomePage() {
       {/* Hero Section - Full screen with CTA */}
       <Hero />
 
+      {/* Register Interest Section - Quick contact form */}
+      <RegisterInterest />
+
       {/* Welcome Section - Grand introduction */}
       <WelcomeSection />
 
@@ -34,14 +37,11 @@ export default function HomePage() {
       {/* Floorplans Section - Thumbnails with download */}
       <FloorplansSection />
 
-      {/* Amenities Section - Premium facilities grid */}
-      <AmenitiesSection />
+      {/* Location Section - Connectivity and infrastructure */}
+      <LocationSection />
 
       {/* Vision Section - Mr. Ketan Jogi's vision and investment benefits */}
       <VisionSection />
-
-      {/* Infrastructure Section - Major infrastructure projects */}
-      <InfrastructureSection />
 
       {/* Contact Preview - Quick contact card */}
       <ContactPreview />

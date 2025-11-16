@@ -178,18 +178,36 @@ export default function FloorplansSection() {
                     {plan.floors}
                   </p>
 
-                  {/* Download Button */}
-                  <a
-                    href={plan.thumbnail}
-                    download={`${plan.title.replace(/ /g, '-')}.jpg`}
-                    className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-[#d4b896] text-white rounded-lg hover:bg-[#c4a886] transition-colors duration-300 shadow-md hover:shadow-lg"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    <span className="text-sm font-semibold">Download Floor Plan</span>
-                  </a>
+                  {/* Download & Enquiry Buttons */}
+                  <div className="flex flex-wrap gap-3 mb-6">
+                    <a
+                      href={plan.thumbnail}
+                      download={`${plan.title.replace(/ /g, '-')}.jpg`}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#d4b896] text-white rounded-lg hover:bg-[#c4a886] transition-colors duration-300 shadow-md hover:shadow-lg"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                      </svg>
+                      <span className="text-sm font-semibold">Download</span>
+                    </a>
+
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        console.log('Floorplan enquiry button clicked!')
+                        const event = new CustomEvent('showEnquiryPopup')
+                        window.dispatchEvent(event)
+                        console.log('Event dispatched:', event)
+                      }}
+                      className="inline-flex items-center gap-2 px-4 py-2 bg-[#0a4d5c] text-white rounded-lg hover:bg-[#083d4a] transition-colors duration-300 shadow-md hover:shadow-lg"
+                    >
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                      <span className="text-sm font-semibold">Enquiry</span>
+                    </button>
+                  </div>
 
                   {/* Features */}
                   {plan.features && (

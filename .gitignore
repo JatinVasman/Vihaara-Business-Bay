@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -14,6 +15,7 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
@@ -23,10 +25,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
+lerna-debug.log*
 
 # local env files
 .env*.local
 .env
+.env.development.local
+.env.test.local
+.env.production.local
 
 # vercel
 .vercel
@@ -41,6 +48,26 @@ next-env.d.ts
 *.swp
 *.swo
 *~
+.project
+.classpath
+.settings/
 
 # OS
 Thumbs.db
+.DS_Store
+*.log
+
+# Documentation (temporary setup files)
+CONTACT_POPUP_SETUP.md
+IMPLEMENTATION_COMPLETE.md
+*.copilotmd
+.azure/
+
+# Cache
+.cache/
+.temp/
+.tmp/
+
+# Lock files (keep only package-lock.json for npm)
+yarn.lock
+pnpm-lock.yaml
