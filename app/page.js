@@ -1,14 +1,13 @@
-'use client'
+"use client";
 
-import Hero from '@/components/Hero'
-import RegisterInterest from '@/components/sections/RegisterInterest'
-import WelcomeSection from '@/components/sections/WelcomeSection'
-import AboutSection from '@/components/sections/AboutSection'
-import VisionSection from '@/components/sections/VisionSection'
-import LocationSection from '@/components/sections/LocationSection'
-import FloorplansSection from '@/components/sections/FloorplansSection'
-import ContactPreview from '@/components/ContactPreview'
-import { useSmoothScroll } from '@/hooks/useSmoothScroll'
+import Hero from "@/components/Hero";
+import WelcomeSection from "@/components/sections/WelcomeSection";
+import AboutSection from "@/components/sections/AboutSection";
+import AmenitiesSection from "@/components/sections/AmenitiesSection";
+import LocationSection from "@/components/sections/LocationSection";
+import FloorplansSection from "@/components/sections/FloorplansSection";
+import ContactPreview from "@/components/ContactPreview";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 /**
  * Home Page - Main Landing Single-Scroll Page
@@ -18,18 +17,18 @@ import { useSmoothScroll } from '@/hooks/useSmoothScroll'
 
 export default function HomePage() {
   // Enable smooth scrolling for anchor links
-  useSmoothScroll()
+  useSmoothScroll();
 
   return (
     <>
       {/* Hero Section - Full screen with CTA */}
       <Hero />
 
-      {/* Register Interest Section - Quick contact form */}
-      <RegisterInterest />
-
       {/* Welcome Section - Grand introduction */}
       <WelcomeSection />
+
+      {/* Interiors & Amenities Section - Image display */}
+      <AmenitiesSection />
 
       {/* About Section - Vision, highlights, stats, investment benefits */}
       <AboutSection />
@@ -40,11 +39,8 @@ export default function HomePage() {
       {/* Location Section - Connectivity and infrastructure */}
       <LocationSection />
 
-      {/* Vision Section - Mr. Ketan Jogi's vision and investment benefits */}
-      <VisionSection />
-
       {/* Contact Preview - Quick contact card */}
       <ContactPreview />
     </>
-  )
+  );
 }
