@@ -26,7 +26,7 @@ export default function Hero() {
       </div>
 
       {/* Sparkling Logo Overlay */}
-      <div className="absolute top-8 left-8 sm:top-12 sm:left-12 md:top-16 md:left-16 lg:top-20 lg:left-20 z-10">
+      <div className="absolute top-4 left-1/4 -translate-x-1/2 translate-y-20 sm:top-6 sm:left-1/4 sm:translate-y-24 md:top-8 md:left-1/4 md:translate-y-28 lg:top-10 lg:left-1/4 lg:translate-y-32 z-10">
         <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
           <Image
             src="/Logo/Sparkling Logo.png"
