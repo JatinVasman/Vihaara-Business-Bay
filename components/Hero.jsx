@@ -26,19 +26,32 @@ export default function Hero() {
       </div>
 
       {/* Sparkling Logo Overlay */}
-      <div className="absolute top-4 left-1/4 -translate-x-1/2 translate-y-20 sm:top-6 sm:left-1/4 sm:translate-y-24 md:top-8 md:left-1/4 md:translate-y-28 lg:top-10 lg:left-1/4 lg:translate-y-32 z-10">
-        <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56">
-          <Image
-            src="/Logo/Sparkling Logo.png"
-            alt="Vihaara Sparkling Logo"
-            fill
-            priority
-            quality={100}
-            className="object-contain"
-            sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, (max-width: 1024px) 192px, 224px"
-          />
-        </div>
-      </div>
+      {/* Sparkling Logo Overlay */}
+<div className="absolute z-10 
+  left-[6%] 
+  bottom-[18%]">
+  
+  <div className="relative 
+    w-40 h-40 
+    sm:w-48 sm:h-48 
+    md:w-56 md:h-56 
+    lg:w-64 lg:h-64">
+    
+    <Image
+      src="/Logo/Sparkling Logo.png"
+      alt="Vihaara Sparkling Logo"
+      fill
+      priority
+      quality={100}
+      className="object-contain"
+      sizes="(max-width: 640px) 180px,
+             (max-width: 768px) 200px,
+             (max-width: 1024px) 240px,
+             260px"
+    />
+  </div>
+</div>
+
     </section>
   );
 }
