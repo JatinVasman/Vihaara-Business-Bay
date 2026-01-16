@@ -41,7 +41,7 @@ export default function Navbar() {
             aria-label="Vihaara Business Bay Home"
           >
             <Image
-              src="/Logo/Sparkling Logo.png"
+              src="/Logo/Black_PNG.png"
               alt="Vihaara Business Bay Logo"
               width={350}
               height={120}
