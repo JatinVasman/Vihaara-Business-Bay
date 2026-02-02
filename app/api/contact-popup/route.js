@@ -65,7 +65,8 @@ export async function POST(request) {
     if (resend && process.env.ADMIN_EMAIL) {
       try {
         const emailResult = await resend.emails.send({
-          from: 'Vihaara Business Bay <onboarding@resend.dev>', // Use your verified domain
+          from: 'Vihaara Business Bay <onboarding@resend.dev>',
+          replyTo: 'vihaarabusinessbay@gmail.com',
           to: process.env.ADMIN_EMAIL,
           subject: `🎯 New Lead: ${name} - Vihaara Business Bay`,
           html: `
@@ -163,6 +164,7 @@ export async function POST(request) {
       try {
         await resend.emails.send({
           from: 'Vihaara Business Bay <onboarding@resend.dev>',
+          replyTo: 'vihaarabusinessbay@gmail.com',
           to: email,
           subject: 'Thank you for your interest in Vihaara Business Bay',
           html: `
